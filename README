@@ -1,0 +1,22 @@
+UltaVPN Link Decoder and Config Generator
+
+DESCRIPTION
+This tool decodes UltaVPN links (vpn://) and can fetch WireGuard configurations from the API.
+
+USAGE
+python vpn2conf.py <vpn_link> [OPTIONS]
+
+OPTIONS
+  -gc, --get-conf    Fetch WireGuard configuration from API
+  -o, --output FILE  Save WireGuard configuration to FILE
+  -h, --help         Show help message
+
+EXAMPLES
+1. Decode VPN link only:
+   python vpn2conf.py "vpn://abcd1234..."
+
+2. Decode VPN link and fetch configuration:
+   python vpn2conf.py "vpn://abcd1234..." -gc
+
+3. Decode VPN link, fetch and save configuration:
+   python vpn2conf.py "vpn://abcd1234..." -gc -o wireguard.conf 
